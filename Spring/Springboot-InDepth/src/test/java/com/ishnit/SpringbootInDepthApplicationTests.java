@@ -1,4 +1,4 @@
-package com.ishnit.SpringbootInDepth;
+package com.ishnit;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
