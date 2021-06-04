@@ -1,6 +1,7 @@
 package com.ishnit.controller;
 
 import com.ishnit.entity.Department;
+import com.ishnit.error.DepartmentNotFoundException;
 import com.ishnit.service.DepartmentService;
 import org.slf4j.ILoggerFactory;
 import org.slf4j.Logger;
@@ -30,7 +31,7 @@ public class DepartmentController {
     }
 
     @GetMapping("/departments/{id}")
-    public Department getDepartmentById(@PathVariable("id") Long deptId){
+    public Department getDepartmentById(@PathVariable("id") Long deptId) throws DepartmentNotFoundException {
         log.info("Get a Department");
         return service.getDepartmentById(deptId);
     }

@@ -1,6 +1,7 @@
 package com.ishnit.service;
 
 import com.ishnit.entity.Department;
+import com.ishnit.error.DepartmentNotFoundException;
 
 import java.util.List;
 
@@ -10,7 +11,7 @@ public interface DepartmentService {
 
     public List<Department> getDepartmentList();
 
-    public Department getDepartmentById(Long deptId);
+    public Department getDepartmentById(Long deptId) throws DepartmentNotFoundException;
 
     public void deleteDepartmentById(Long deptId);
 

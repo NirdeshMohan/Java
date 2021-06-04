@@ -1,12 +1,14 @@
 package com.ishnit.service;
 
 import com.ishnit.entity.Department;
+import com.ishnit.error.DepartmentNotFoundException;
 import com.ishnit.repository.DepartmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 @Service
 public class DepartmentServiceImpl implements DepartmentService{
@@ -25,8 +27,13 @@ public class DepartmentServiceImpl implements DepartmentService{
     }
 
     @Override
-    public Department getDepartmentById(Long deptId) {
-        return repository.findById(deptId).get();
+    public Department getDepartmentById(Long deptId) throws DepartmentNotFoundException {
+        Optional<Department> department = repository.findById(deptId);
+
+        if(!department.isPresent()){
+            throw new DepartmentNotFoundException("Department is not available");
+        }
+        return department.get();
     }
 
     @Override
