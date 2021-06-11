@@ -3,7 +3,8 @@ server:
 
 spring:
   profiles:
-    active: qa
+    active: dev
+
 ---
 spring:
   profiles: dev
@@ -19,6 +20,12 @@ spring:
     show-sql: true
 welcome:
   message: Welcome To Spring Boot World
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 ---
 spring:

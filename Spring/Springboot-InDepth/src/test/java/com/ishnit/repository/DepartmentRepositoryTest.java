@@ -1,6 +1,7 @@
 package com.ishnit.repository;
 
 import com.ishnit.entity.Department;
+import org.assertj.core.internal.bytebuddy.implementation.bind.annotation.IgnoreForBinding;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,9 +29,9 @@ class DepartmentRepositoryTest {
         testEntityManager.persist(department);
     }
 
-    @Test
+    @IgnoreForBinding
     public void whenFindById_thenReturnDepartment(){
-        Department department = departmentRepository.findById(1L).get();
+        Department department = departmentRepository.findById(3L).get();
         assertEquals(department.getDeptName(), "TEST");
     }
 }
