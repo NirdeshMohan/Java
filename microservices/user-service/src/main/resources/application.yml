@@ -4,10 +4,11 @@ server:
 spring:
   profiles:
     active: dev
-
 ---
 spring:
   profiles: dev
+  application:
+    name: USER-SERVICE
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     password: root
@@ -18,6 +19,15 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+eureka :
+  client:
+    register-with-eureka : true
+    fetch-registry : true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    instance :
+      hostname : localhost
+
 welcome:
   message: Welcome To Spring Boot User Service!
 
@@ -31,6 +41,8 @@ management:
 ---
 spring:
   profiles: qa
+  application:
+    name: USER-SERVICE
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     password: root
@@ -47,6 +59,8 @@ welcome:
 ---
 spring:
   profiles: prod
+  application:
+    name: USER-SERVICE
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     password: root
