@@ -4,11 +4,9 @@ server :
 spring :
   application :
     name : CONFIG-SERVER
-    
-eureka :
-  register-with-eureka : true
-  fetch-registry : true
-  service-url :
-    defaultZone : http://localhost:8761/eureka
-  instance :
-    hostname : localhost
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/NirdeshMohan/config-server
+          clone-0n-start: true
