@@ -36,5 +36,8 @@ out/
 ### VS Code ###
 .vscode/
 
-##prop
-*.yml
+### prop ###
+fullstack/iplanalysis/src/main/resources/application.yml
+
+### React App ###
+src/ui-app/node_modules/
