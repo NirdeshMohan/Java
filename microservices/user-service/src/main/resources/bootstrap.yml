@@ -1,4 +1,5 @@
-cloud:
-  config:
-    enabled: true
-    uri: http://localhost:7100
+spring:
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:7100

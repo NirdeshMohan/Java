@@ -20,10 +20,8 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-
 welcome:
   message: Welcome To Spring Boot Department Service!
-
 management:
   endpoints:
     web:
