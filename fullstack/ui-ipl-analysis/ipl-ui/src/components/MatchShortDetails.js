@@ -1,9 +1,14 @@
 import { React } from 'react';
-export const MatchShortDetails = ({match}) => {
+import { Link } from 'react-router-dom';
+
+export const MatchShortDetails = ({teamName, match}) => {
+
+  const otherTeam = match.team1 === teamName ? match.team2 : match.team1;
+  const otherTeamRoute = `/teams/${otherTeam}`;
+
     return (
       <div className="MatchShortDetails">
-        <p>Match played on, {match.date}</p>
-        <p>{match.team1} VS {match.team2}</p>
+        <p>Match played on, {match.date} - VS <Link to={otherTeamRoute}>{otherTeam}</Link></p>
       </div>
     );
 }
