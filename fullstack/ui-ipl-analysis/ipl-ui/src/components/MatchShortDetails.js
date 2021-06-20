@@ -1,7 +1,9 @@
-export const MatchShortDetails = () => {
+import { React } from 'react';
+export const MatchShortDetails = ({match}) => {
     return (
       <div className="MatchShortDetails">
-        <h3>Team Short Details</h3>
+        <p>Match played on, {match.date}</p>
+        <p>{match.team1} VS {match.team2}</p>
       </div>
     );
 }
