@@ -2,6 +2,7 @@ package com.ishnit.iplanalysis.service;
 
 import java.util.List;
 
+import com.ishnit.iplanalysis.model.Matchdata;
 import com.ishnit.iplanalysis.model.Team;
 import com.ishnit.iplanalysis.repository.TeamRepository;
 
@@ -25,6 +26,5 @@ public class TeamService {
         System.out.println("TEAM NAME:"+teamName);
         team.setMatches(matchService.findLatestMatchesByTeam(teamName));
         return team;
-    }    
-        
+    }
 }

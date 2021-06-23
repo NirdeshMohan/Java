@@ -1,5 +1,6 @@
 package com.ishnit.iplanalysis.service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import com.ishnit.iplanalysis.model.Matchdata;
@@ -17,5 +18,8 @@ public class MatchService {
     public List<Matchdata> findLatestMatchesByTeam(String teamName) {
         return matchDataRepository.findLatestMatchesByTeam(teamName, 4);
     }
-    
+
+    public List<Matchdata> getByTeam1OrTeam2AndDateBetweenOrderByDateDesc(String teamName, LocalDate startDate, LocalDate endDate) {
+        return matchDataRepository.findTeamDataByTeam1AndDateBetweenOrTeam2AndDateBetweenOrderByDateDesc(teamName, startDate, endDate, teamName, startDate, endDate);
+    }
 }
