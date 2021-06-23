@@ -20,6 +20,7 @@ public class MatchService {
     }
 
     public List<Matchdata> getByTeam1OrTeam2AndDateBetweenOrderByDateDesc(String teamName, LocalDate startDate, LocalDate endDate) {
-        return matchDataRepository.findTeamDataByTeam1AndDateBetweenOrTeam2AndDateBetweenOrderByDateDesc(teamName, startDate, endDate, teamName, startDate, endDate);
+        //return matchDataRepository.findTeamDataByTeam1AndDateBetweenOrTeam2AndDateBetweenOrderByDateDesc(teamName, startDate, endDate, teamName, startDate, endDate);
+        return matchDataRepository. findMatchesByTeamBetweenDates(teamName, startDate, endDate);
     }
 }
