@@ -1,4 +1,12 @@
 .App {
+  padding: 20px;
   text-align: left;
-  margin-left: 22px;
+}
+
+.won-game{
+  background-color:#32a8a4;
+}
+
+.lost-game{
+  background-color:#a86532;
 }

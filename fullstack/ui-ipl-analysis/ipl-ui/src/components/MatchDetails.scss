@@ -1,0 +1,18 @@
+.MatchDetails{
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+
+    .match-date, .match-venu, .match-result{
+        margin-top: 10px;
+    }
+
+    .additional-detail{
+        text-align: right;
+        & > p{
+            margin-bottom: 20px;
+        }
+    }
+}
