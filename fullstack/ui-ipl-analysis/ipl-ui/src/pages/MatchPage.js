@@ -1,7 +1,9 @@
+import './MatchPage.scss'
 import { React, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { MatchDetails } from '../components/MatchDetails';
-//import { MatchShortDetails } from '../components/MatchShortDetails';
+import { YearSelector } from '../components/YearSelector';
+
 
 export const MatchPage = () => {
 
@@ -22,14 +24,15 @@ export const MatchPage = () => {
         
     );
     
-    // if (!matches || !matches.teamName){
-    //     return <h2>No Team Matches found!!</h2>;
-    // }
-
     return (
-      <div className="TeamPage">
-        <h1>Match Page</h1>
-            {matches.map(match => <MatchDetails teamName={teamName} match={match}/>)} 
+      <div className="MatchPage">
+        <div className="year-selector">
+            <YearSelector/>
+        </div>
+        <div>  
+            <h1>Match Page</h1>
+                < div>{matches.map(match => <MatchDetails teamName={teamName} match={match}/>)}</div>
+        </div>
       </div>
     );
 }
