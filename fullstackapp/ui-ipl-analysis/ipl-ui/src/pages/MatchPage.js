@@ -27,7 +27,7 @@ export const MatchPage = () => {
     return (
       <div className="MatchPage">
         <div className="year-selector">
-            <YearSelector/>
+            <YearSelector teamName={teamName}/>
         </div>
         <div>  
             <h1>Match Page</h1>
