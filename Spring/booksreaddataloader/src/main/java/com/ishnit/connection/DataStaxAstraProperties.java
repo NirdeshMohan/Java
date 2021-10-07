@@ -1,4 +1,4 @@
-package connection;
+package com.ishnit.connection;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
