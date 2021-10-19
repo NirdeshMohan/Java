@@ -1,10 +1,8 @@
-package com.ishnit.author;
+package com.ishnit.entity;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 import org.springframework.data.cassandra.core.mapping.*;
-
-import java.lang.reflect.Type;
 
 @Table(value = "author_by_id")
 public class Author {

@@ -1,3 +1,9 @@
+spring.aapplication.name: booksread-data-loader
+
+datadump.location:
+  author: E:\Downloads\ol_dump_authors_2021-09-22.txt
+  works: E:\Downloads\ol_dump_works_2021-09-22.txt
+
 spring:
   data:
     cassandra:
@@ -20,9 +26,6 @@ astra.db:
   region: us-east4
   keyspace: main
   application.token: AstraCS:ArEwmlYzudOtkZIeNBIeGpZY:b997be90c44f76ea2ecba3379472a1299f22d255646ae23d4a7ac71ab428cc45
-
-
-
 
 ### Client ID
 ### iqKITKZkkLxHLCjAOmbthEIE
